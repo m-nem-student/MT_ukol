@@ -17,12 +17,34 @@
         android:id="@+id/textView2"
         android:layout_width="260dp"
         android:layout_height="139dp"
-        android:text="MMO Games"
+        android:text="@{ String.valueOf(viewModel.subjectInfoValue.response.player_count) }"
         android:textSize="35sp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total War:Warhammer 3"
+        android:onClick="@{ () -> viewModel.getSubjectInfo(1142710) }"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Civiliyation 6"
+        android:onClick="@{ () -> viewModel.getSubjectInfo(289070) }"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
