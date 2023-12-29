@@ -18,9 +18,11 @@ class MMOActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val app = application as MyApplication
-        viewModel = ViewModelProvider(this, MMOViewModelFactory(app.repository)).get(MMOViewModel::class.java)
+        viewModel = ViewModelProvider(this, MMOViewModelFactory(app.repository, this)).get(MMOViewModel::class.java)
 
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
+
+
     }
 }

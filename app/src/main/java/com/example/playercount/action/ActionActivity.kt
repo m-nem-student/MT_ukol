@@ -20,7 +20,7 @@ class ActionActivity : AppCompatActivity() {
         setContentView(view)
 
         val app = application as MyApplication
-        viewModel = ViewModelProvider(this, ActionViewModelFactory(app.repository)).get(
+        viewModel = ViewModelProvider(this, ActionViewModelFactory(app.repository, this)).get(
             ActionViewModel::class.java)
 
         binding.viewModel = viewModel

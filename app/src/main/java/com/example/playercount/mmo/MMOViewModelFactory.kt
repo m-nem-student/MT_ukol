@@ -7,12 +7,13 @@ import com.example.playercount.Repository
 
 
 class MMOViewModelFactory (
-    private val repository: Repository
+    private val repository: Repository,
+    private val context: Context
 ) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MMOViewModel::class.java)) {
-            return MMOViewModel(repository) as T
+            return MMOViewModel(repository, context) as T
         }
         throw IllegalArgumentException("Wrong ViewModel class")
     }
