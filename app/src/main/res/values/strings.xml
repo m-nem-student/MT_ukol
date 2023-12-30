@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PlayerCount</string>
+    <string name="counter_strike_2">Counter Strike 2</string>
+    <string name="team_fortress_2">Team Fortress 2</string>
+    <string name="total_war_warhammer_3">Total War:Warhammer 3</string>
+    <string name="civilization_6">Civilization 6</string>
+    <string name="final_fantasy_14">Final Fantasy 14</string>
+    <string name="the_elder_scrolls_online">The Elder Scrolls Online</string>
 </resources>
