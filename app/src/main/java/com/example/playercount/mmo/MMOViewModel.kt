@@ -22,7 +22,7 @@ class MMOViewModel(
 
     val file: String = "playerCounter.txt"
     private val _subjectInfoValue = MutableLiveData<Contents>()
-    private val _nameOfTheGame = MutableLiveData<String>("Vyber si hru")
+    private val _nameOfTheGame = MutableLiveData<String>("Choose a game")
     val subjectInfoValue: LiveData<Contents> = _subjectInfoValue
     val nameOfTheGame: LiveData<String> = _nameOfTheGame
 
@@ -50,7 +50,7 @@ class MMOViewModel(
         try{
             fileOutputStream = packageContext.openFileOutput(file, Context.MODE_PRIVATE)
             if (data != null) {
-                fileOutputStream.write("${data.response.player_count.toString()} hráčů v ${gameName}".toByteArray())
+                fileOutputStream.write("${data.response.player_count.toString()} players in ${gameName}".toByteArray())
             }
         }
         catch (e: Exception){

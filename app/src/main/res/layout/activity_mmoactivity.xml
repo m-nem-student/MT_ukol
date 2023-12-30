@@ -12,6 +12,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gray"
     tools:context=".mmo.MMOActivity">
 
     <TextView
@@ -19,6 +20,7 @@
         android:layout_width="260dp"
         android:layout_height="139dp"
         android:gravity="center"
+        android:textColor="@color/white"
         android:text="@{ String.valueOf(viewModel.subjectInfoValue.response.player_count) }"
         android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/button6"
@@ -31,6 +33,7 @@
         android:layout_width="260dp"
         android:layout_height="139dp"
         android:gravity="center"
+        android:textColor="@color/white"
         android:text="@{ String.valueOf(viewModel.nameOfTheGame) }"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,6 +48,7 @@
         android:layout_height="wrap_content"
         android:text="@string/final_fantasy_14"
         android:onClick="@{ () -> viewModel.getSubjectInfo(39210, @string/final_fantasy_14) }"
+        android:backgroundTint="@color/red"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +60,7 @@
         android:layout_height="wrap_content"
         android:text="@string/the_elder_scrolls_online"
         android:onClick="@{ () -> viewModel.getSubjectInfo(306130, @string/the_elder_scrolls_online) }"
+        android:backgroundTint="@color/red"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button3"
@@ -67,6 +72,7 @@
         android:layout_height="wrap_content"
         android:onClick="@{ () -> viewModel.changeActivityToMain() }"
         android:text="Back"
+        android:backgroundTint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
