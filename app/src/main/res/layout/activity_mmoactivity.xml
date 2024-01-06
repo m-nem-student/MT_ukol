@@ -17,27 +17,29 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="260dp"
-        android:layout_height="139dp"
+        android:layout_width="206dp"
+        android:layout_height="98dp"
         android:gravity="center"
-        android:textColor="@color/white"
         android:text="@{ String.valueOf(viewModel.subjectInfoValue.response.player_count) }"
+        android:textColor="@color/white"
         android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="260dp"
-        android:layout_height="139dp"
+        android:layout_width="194dp"
+        android:layout_height="94dp"
         android:gravity="center"
-        android:textColor="@color/white"
         android:text="@{ String.valueOf(viewModel.nameOfTheGame) }"
+        android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,10 +48,10 @@
         android:id="@+id/button3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/final_fantasy_14"
-        android:onClick="@{ () -> viewModel.getSubjectInfo(39210, @string/final_fantasy_14) }"
         android:backgroundTint="@color/red"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        android:onClick="@{ () -> viewModel.getSubjectInfo(39210, @string/final_fantasy_14) }"
+        android:text="@string/final_fantasy_14"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -58,10 +60,10 @@
         android:id="@+id/button4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/the_elder_scrolls_online"
-        android:onClick="@{ () -> viewModel.getSubjectInfo(306130, @string/the_elder_scrolls_online) }"
         android:backgroundTint="@color/red"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        android:onClick="@{ () -> viewModel.getSubjectInfo(306130, @string/the_elder_scrolls_online) }"
+        android:text="@string/the_elder_scrolls_online"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toTopOf="parent" />
@@ -77,6 +79,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:onClick="@{ () -> viewModel.getSubjectInfo(1063730, @string/new_world) }"
+        android:text="@string/new_world"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:onClick="@{ () -> viewModel.getSubjectInfo(1284210, @string/guild_wars_2) }"
+        android:text="@string/guild_wars_2"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
